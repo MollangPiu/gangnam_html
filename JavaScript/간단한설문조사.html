@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>설문조사 폼</title>
+</head>
+<body>
+  <h2>간단한 설문조사</h2>
+
+  <label>이름: <input type="text" id="username"></label><br><br>
+
+  <p>좋아하는 과일:</p>
+  <label><input type="checkbox" name="fruit" value="사과"> 사과</label>
+  <label><input type="checkbox" name="fruit" value="바나나"> 바나나</label>
+  <label><input type="checkbox" name="fruit" value="딸기"> 딸기</label><br><br>
+
+  <p>성별:</p>
+  <label><input type="radio" name="gender" value="남자"> 남자</label>
+  <label><input type="radio" name="gender" value="여자"> 여자</label><br><br>
+
+  <label>생년월일: <input type="date" id="birth"></label><br><br>
+
+  <button onclick="printResult()">결과 출력</button>
+
+  <script>
+    function printResult() {
+      const name = document.getElementById("username").value;
+      const birth = document.getElementById("birth").value;
+
+      const fruits = Array.from(document.querySelectorAll("input[name='fruit']:checked"))
+                          .map(el => el.value);
+
+      const genderEl = document.querySelector("input[name='gender']:checked");
+      const gender = genderEl ? genderEl.value : "선택 안함";
+
+      console.log("이름:", name);
+      console.log("좋아하는 과일:", fruits.join(", "));
+      console.log("성별:", gender);
+      console.log("생년월일:", birth);
+    }
+  </script>
+</body>
+</html>

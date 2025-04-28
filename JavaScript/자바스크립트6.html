@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text_id" value="" placeholder="아이디를 입력해주세요." />
+    <input type="button" value="클릭" onclick="클릭()" />
+
+    <script>
+        function 클릭() {
+
+            //테그 중에서, id가 누구냐를 찾는 기능.
+            //getElementById();
+            //getElementById([아이디])
+            //getElementById('text_id')
+
+            //컴퓨터용어로: dom
+            let inp_id = document.getElementById('text_id');
+            console.log(inp_id.value);
+
+
+        }
+    </script>
+</body>
+</html>

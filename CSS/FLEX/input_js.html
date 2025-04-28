@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            width: 100px;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        div > span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span data-card="card1">❤</span>
+        <span id="card1" data-card="card1">0</span>
+    </div>
+    <div>
+        <span data-card="card2">❤</span>
+        <span id="card2" data-card="card2">0</span>
+    </div>
+    <div>
+        <span data-card="card3">❤</span>
+        <span id="card3" data-card="card3">0</span>
+    </div>
+
+    <script>
+        const like_cnt = document.querySelectorAll('span[data-card]');
+
+        for(let i =0; i< like_cnt.length; i++) {
+            like_cnt[i].addEventListener('click', function() {
+                const target = document.getElementById(String(this.getAttribute('data-card')));
+                target.textContent = Number(target.textContent)+1;
+                
+            })
+        }
+    </script>
+</body>
+</html>

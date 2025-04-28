@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .div_1 {
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .div_2 {
+            border: 2px solid blue;
+            width: 100px;
+            height: 100px;
+
+            /* top right, bottom, left */
+            margin: 10px 0px 10px 0px;
+            padding: 30px 10px; /* 위아래, 좌우*/
+            /* margin-bottom: ; */
+        }
+
+        .div_3 {
+            border: 2px solid green;
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50%;
+            padding: 10px;
+            overflow: hidden; /* 안의 내용물이 부모테그 바깥으로 넘어가는 현상을 제어*/
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="div_1">
+        내용 1
+    </div>
+
+    <div class="div_2">
+        내용 1
+    </div>
+
+    <div class="div_3">
+        내용 1
+    </div>
+</body>
+</html>

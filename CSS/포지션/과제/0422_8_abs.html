@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .div{
+            border : 3px solid black;
+        }
+
+        .out_box {
+            position: relative;
+            width: 300px;
+            height: 400px;          
+
+            background-image: url('https://img.freepik.com/free-vector/gradient-pastel-sky-background_52683-60514.jpg');
+        }
+
+        .in_img{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+
+            background-image: url('bluestar.png');
+            background-size: contain;
+        }
+        
+        .in_button {
+            position: absolute;
+            top: 100px;
+            left: 80px;
+
+            display: flex;
+            text-align: center;
+            flex-direction: column; 
+            justify-content: center;
+            
+            padding: 20px;
+            width: 100px;
+            height: 150px;
+            
+            background-color: white;
+            opacity: 0.5;
+        }
+        
+        .btn_1 {
+            padding: 10px 20px;
+            font-family: "빙그레체", sans-serif;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="out_box">
+        <div class="in_img"></div>
+        <div class="in_button">
+            <input type = "button" class="btn_1" value="예매하기" /><br/>
+            <input type = "button" class="btn_1" value="시간표" />
+        </div>
+    </div>
+
+</body>
+</html>

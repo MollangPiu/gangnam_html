@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="hobbys" value="수영"/>수영
+    <input type="checkbox" name="hobbys" value="달리기" />달리기
+    <input type="button" value="취미 등록"  onclick="취미()"/>
+
+    <script>
+        function 취미() {
+            let hobbys = document.getElementsByName('hobbys');
+
+            let str = ''; // str 방식
+            let checkedHobbys = []; // array 방식
+            for(let i =0; i < hobbys.length; i++) {
+                if(hobbys[i].cheked) {
+                    str = str + ', ${hobbys[i].value}';      // str 방식
+                    checkedHobbys.push(hobbys[i].value);    // array 방식
+                }
+            }
+
+            const hobbysValue = Array.from(document.querySelectorAll('input[name="hobbys"]:checked'))
+            .map(item => item.value); // array타입으로 return
+        
+            console.log(hobbysValue.join(', ')); // array를 str로 변형
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달 창</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: none;
+        }
+
+        .modal_out {
+            
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position:fixed;
+            top: 0;
+            left: 0;
+            
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .modal_in {
+            width: 400px;
+            height: 300px;
+
+            background-color: white;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>모달 창</h1>
+    <input type="button" value="창 보이기" onclick="show('flex')" /> <br />
+    <img src="./div박스/img1.png" alt="귀여운캐릭터" width="300" height="300" />
+
+    <!-- 모달 창 -->
+    <div class="modal_out" id="target">
+        <div class="modal_in" onclick="show('none')">
+            HELLO WORLD
+        </div>
+    </div>
+
+    <script>
+
+
+        function show(val) {
+            document.getElementById('target').style.display = val;
+        }
+    </script>
+</body>
+
+</html>

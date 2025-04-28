@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꾸며 보기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: none;
+        }
+        body {
+            height: 300vh;
+        }
+        .order_1 {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('forest.jfif');
+            background-size: 100% 100%;
+            
+            background-attachment: fixed;
+        }
+        .order_2 {
+
+            margin: 0px;
+            width: 100vw;
+            height: 200vh;
+            background-image: url('sea.jfif');
+            background-size: 100% 100%;
+        }
+
+
+
+        /* 기존 이미지 */
+        .out_box {
+            position: relative;
+            top: 100px;
+            left: 250px;
+            width: 300px;
+            height: 400px;     
+            background-image: url('https://img.freepik.com/free-vector/gradient-pastel-sky-background_52683-60514.jpg');
+
+            border-radius: 15px;
+        }
+
+        .in_img{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+
+            background-image: url('bluestar.png');
+            background-size: contain;
+        }
+        
+        .in_button {
+            position: absolute;
+            top: 100px;
+            left: 80px;
+
+            display: flex;
+            text-align: center;
+            flex-direction: column; 
+            justify-content: center;
+            
+            padding: 20px;
+            width: 100px;
+            height: 150px;
+            
+            background-color: white;
+            opacity: 0.5;
+        }
+        
+        .btn_1 {
+            padding: 10px 20px;
+            font-family: "빙그레체", sans-serif;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="order_1"></div>
+    <div class="order_2">
+        <div class="out_box">
+            <div class="in_img"></div>
+            <div class="in_button">
+                <input type = "button" class="btn_1" value="예매하기" /><br/>
+                <input type = "button" class="btn_1" value="시간표" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

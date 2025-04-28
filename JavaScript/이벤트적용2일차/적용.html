@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>회원 가입 과제</title>
+</head>
+<body>
+
+<h2>회원 가입</h2>
+
+<form>
+  <label>이름:
+    <input type="text" id="nameInput" onkeyup="checkNameLength()">
+  </label>
+  <p id="nameLength">글자 수: 0</p>
+
+  <label>나이:
+    <input type="number" id="ageInput" onchange="checkAge()">
+  </label>
+  <p id="ageMessage"></p>
+
+  <button type="button" onclick="submitForm()">가입하기</button>
+</form>
+
+<script>
+  function checkNameLength() {
+    const name = document.getElementById('nameInput').value;
+    document.getElementById('nameLength').innerText = "글자 수: " + name.length;
+  }
+
+  function checkAge() {
+    const age = document.getElementById('ageInput').value;
+    const message = document.getElementById('ageMessage');
+    
+    if (age >= 20) {
+      message.innerText = "성인입니다.";
+    } else if (age > 0) {
+      message.innerText = "미성년자입니다.";
+    } else {
+      message.innerText = "올바른 나이를 입력하세요.";
+    }
+  }
+
+  function submitForm() {
+    const name = document.getElementById('nameInput').value;
+    const age = document.getElementById('ageInput').value;
+
+    if (name && age) {
+      alert("가입 완료!\n이름: " + name + "\n나이: " + age);
+    } else {
+      alert("모든 항목을 입력해 주세요.");
+    }
+  }
+</script>
+
+</body>
+</html>

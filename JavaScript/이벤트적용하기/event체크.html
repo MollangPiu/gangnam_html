@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="inp" onkeyup="실행(event)" />
+
+    <script>
+        function 실행(e) {
+            const tar = document.getElementById('inp');
+            console.log('test');
+            if(tar.value.length >= 6) {
+                alert(tar.value);
+                
+                if(tar.value.length > 6) {
+                    tar.value = tar.value.substr(0, 6);
+                }
+            } 
+        }
+    </script>
+</body>
+</html>

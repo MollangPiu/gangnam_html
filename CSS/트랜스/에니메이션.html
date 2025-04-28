@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        div.active {
+            animation-name: test;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes test {
+            /* from {
+                transform: translateX(0px) rotate(0deg);
+            }        
+            to {
+                transform: translateX(300px) rotate(540deg);
+            } */
+             0% {
+                transform: translateX(0px) rotate(0deg);
+                background-color: blue;
+             }
+             20% {
+                transform: translateY(-100px) rotate(540deg) skewX(30deg) skewY(20deg);
+             }
+             50% {
+                transform: translateY(180px) rotate(0deg) scaleX(50deg) scaleY(-20deg);
+                background-color: green;
+             }
+             75% {
+                
+             }
+             100% {
+                transform: translateX(300px) rotate(540deg);
+             }
+        }
+    </style>
+</head>
+<body>
+    <input type="button" onclick="실행()" value="클릭" />
+    <div id="target"></div>
+
+    <script>
+        function 실행() {
+            document.getElementById('target').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
